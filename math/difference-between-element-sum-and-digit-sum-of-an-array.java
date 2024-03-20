@@ -44,20 +44,18 @@ class Solution {
 
 class betterSolution {
     public int differenceOfSum(int[] nums) {
-        int n=nums.length;
-        int esum=0;
-        int dsum=0;
+        int sum=0;
+        int digitSum=0;
         
-        for(int i=0;i<n;i++){
-            esum=esum+nums[i];
-        
-            while(nums[i]!=0){
-                int l=nums[i]%10;
-                dsum=dsum+l;
-                nums[i]=nums[i]/10;
+        for(int num:nums){
+            sum+=num;
+
+            while(num>0){
+                int digit=num%10;
+                digitSum+=digit;
+                num=num/10;
             }
         }
-        int p=Math.abs(esum-dsum);
-        return p;
+        return Math.abs(sum - digitSum);
     }
 }
