@@ -35,4 +35,29 @@ class Solution {
 /**
  * Complexity:
  * Time:O(n) and Space:O(1)
+ * But it's not easy-read and complicated
  */
+
+
+
+
+
+class betterSolution {
+    public int differenceOfSum(int[] nums) {
+        int n=nums.length;
+        int esum=0;
+        int dsum=0;
+        
+        for(int i=0;i<n;i++){
+            esum=esum+nums[i];
+        
+            while(nums[i]!=0){
+                int l=nums[i]%10;
+                dsum=dsum+l;
+                nums[i]=nums[i]/10;
+            }
+        }
+        int p=Math.abs(esum-dsum);
+        return p;
+    }
+}
