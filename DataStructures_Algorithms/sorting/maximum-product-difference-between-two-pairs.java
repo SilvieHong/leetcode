@@ -14,7 +14,6 @@ class Solution {
 
 
 
-//
 class betterSolution {
     public int maxProductDifference(int[] nums) {
         int[] firstPair = findMax_Min(nums);
