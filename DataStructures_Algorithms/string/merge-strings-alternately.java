@@ -8,6 +8,7 @@ class Solution {
         int a = 0;
         int b = 0;
 
+        // take turns to append the char until the smallest length between word1 and word2
         for (int i = 0; i < Math.min(word1.length(), word2.length()) * 2; i++) {
             if (i % 2 == 0) {
                 sb.append(ch1[a]);
@@ -17,7 +18,8 @@ class Solution {
                 b++;
             }
         }
-
+        
+        // return the answer, or retrun the answer after append the leftovers
         if(word1.length()== word2.length()){
             return sb.toString();
         }else if(word1.length() > word2.length()){
