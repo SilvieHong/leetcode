@@ -23,9 +23,9 @@ class Solution {
                 cnt++;
             }
         }
+        
         return cnt;
     }
-  
      public static String toBinary(int num) {
         StringBuilder sb = new StringBuilder();
         boolean isEnd = false;
@@ -42,5 +42,26 @@ class Solution {
 }
 /**
  * Complexity:
- * Time:O(n) and Space:O(logn)
+ * Time:O(logx+logy) and Space:O(logx+logy)
+ */
+
+
+
+
+
+//https://leetcode.com/problems/hamming-distance/solutions/4513097/simple-java-solution-beats-100/
+class betterSolution {
+    public int hammingDistance(int x, int y) {
+        int ans=x^y;  //"corresponding bits are different" means XOR
+        int c=0;
+        while(ans!=0){
+            ans = ans & (ans-1);
+            c++;
+        }
+        return c;
+    }
+}
+/**
+ * Complexity:
+ * Time:O(logn) and Space:O(1)
  */
