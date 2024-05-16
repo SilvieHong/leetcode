@@ -20,18 +20,3 @@ class Solution {
  * Complexity:
  * Time:O(n) and Space:O(n)
  */
-
-
-
-
-
-//https://leetcode.com/problems/number-complement/solutions/3993385/easy-solution-with-explanation-2-approaches-without-bit-manipulation-beats-100/
-class betterSolution {
-    public int findComplement(int num) {
-	    return ~num & (Integer.highestOneBit(num) - 1);
-    }
-}
-/**
- * Complexity:
- * Time:O(1) and Space:O(1)
- */
