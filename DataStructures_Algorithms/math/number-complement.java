@@ -18,5 +18,5 @@ class Solution {
 }
 /**
  * Complexity:
- * Time:O(n) and Space:O(n)
+ * Time:O(logn) and Space:O(logn)
  */
