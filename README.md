@@ -4,10 +4,15 @@ I'm exploring optimized code!
 
 # ✅ DataStructure_Algorithms
 * array
+* backtracking
 * binarysearch
+* dfs
+* dp
 * greedy
 * math
 * matrix
+* queue
+* recursion
 * sorting
 * stack
 * string
